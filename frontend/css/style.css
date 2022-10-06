@@ -31,6 +31,10 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--bg-color);
   display: flex;
@@ -40,19 +44,32 @@ body {
   font-family: var(--font-primary);
 }
 
-body .constant{
+.constant{
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 2 auto;
 }
 
-.revealUp {
-  opacity: 1;
-  visibility: visible;
+.clock{
+  width: 100%;
+  height: 100%;
+  margin: 2 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
+
+body .constant .child {
+  position: sticky;
+  top: 0%;
+  left: 0%;
+  transform: translate(-0%, -0%);
+  }
 
 .container {
   display: flex;
@@ -69,6 +86,7 @@ body .constant{
 .extra{
   align-items: center;
   height: 100%;
+  width: 50%;
   text-align: center;
   margin: 0 auto 0 35vw;
   transform: translateY(10vh);
@@ -78,12 +96,12 @@ body .constant{
 .extra h1{
   text-shadow: 2px 2px 0 var(--accent-color);
   font-style: italic;
-  margin: 5rem 0;
+  margin: 2rem 3;
   font-size: 3.5rem;
 }
 
 .extra p{
-  margin: 5rem 0;
+  margin: 3rem 0;
   font-size: 1.1rem;
   font-family: var(--font-secondary);
   line-height: 1.8;
@@ -180,21 +198,17 @@ section {
   flex: 1 1 auto;
 }
 
-#countdown {
-  display: none;
-  text-align: center;
-}
-
 .countdown {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .countdown ul {
   display: flex;
-  gap: 2rem;
+  gap: 2rem
 }
 .countdown .clock-item {
   list-style: none;
@@ -235,54 +249,18 @@ section {
   text-align: center;
 }
 
-.countdown h2 {
-  margin-top: 1rem;
-}
-
-.countdown > p {
+.countdown p {
   font-size: 1.1rem;
   font-family: var(--font-secondary);
   margin-bottom: 2rem;
   text-align: center;
 }
 
-
-.mint-btn {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-  margin: auto;
-}
-
-.input-number {
-  height: 100%;
-  padding: 1rem;
-  vertical-align: top;
-  text-align: center;
-  outline: none;
-}
-
-.input-number,
-.input-number-decrement,
-.input-number-increment {
-  user-select: none;
-}
-
-.total-price-container {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 1rem 0 2rem;
-}
-
-.total-price-container p {
-  color: var(--accent-color);
-}
-
 /* SLIDDER */
 
 .splide {
   position: absolute;
+  margin-right: 3rem;
   top: 90px;
   left: 5rem;
   z-index: -1;

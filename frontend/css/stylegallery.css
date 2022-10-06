@@ -1,0 +1,81 @@
+/* FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Righteous&family=Staatliches&display=swap');
+
+/* GLOBAL STYLES */
+
+:root {
+    --font-primary: 'Righteous', serif;
+    --font-secondary: 'Staatliches', sans-serif;
+    --font-code: 'Josefin Sans', monospace;
+    --bg-color: #041811;
+    --bg-color-transparent: #2e1d0080;
+    --font-color: #ffffff;
+    --btn-bg-color: #ffffff;
+    --accent-color: #00a88c;
+    --header-shadow: var(--accent-color) 0px 0px 5px;
+    --card-shadow: var(--accent-color) 0px 0px 20px;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-flow: column;
+    height: 150vh;
+    color: var(--font-color);
+    font-family: var(--font-primary);
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--btn-bg-color);
+    color: var(--accent-color);
+    font-family: var(--font-secondary);
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0 0 var(--accent-color);
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    outline: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+
+  .btn:hover {
+    box-shadow: none;
+  }
+
+  .extra{
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto 0 35vw;
+    transform: translateY(10vh);
+    transition: all 0.5s ease-in-out;
+    margin: 3rem 0;
+    font-size: 1.1rem;
+    font-family: var(--font-secondary);
+    line-height: 1.8;
+  }
