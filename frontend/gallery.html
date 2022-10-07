@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
 	<head>
 		<title>Special Scrubs Service</title>
 		<meta charset="UTF-8" />
@@ -29,26 +28,43 @@
 		<link rel="manifest" href="frontend/images/x-icon/site.webmanifest" />
 	</head>
 
-    <section class="container">
-		<h1 style="font-size:50px">
-			ARCH News
-		</h1>
-     <div class="extra">
-      <video width="500px" height="500px" controls="controls">
-         <source src="vid.mp4" type="video/mp4">
-      </video>
+<body>
 
-	  <h2>
-		How to insert video
-		and play in HTML
-	  </h2>
-
-	  <p>
-		Adding Video on my Webpage
-	  <p>
-	 </div>
-	</section>
+	<section class="extra">
+		<h1>ARCH Intro!</h1>
+		<div class="border">
+		  <div class="videos">
+			<video class="active" src="videos/video1.mp4" muted></video>
+			<video src="videos/video2.mp4" muted></video>
+			<video src="videos/video3.mp4" muted></video>
+			<video src="videos/video4.mp4" muted></video>
+		  </div>
+		  <div class="main-video">
+			<video src="videos/video1.mp4" muted controls autoplay></video>
+		  </div>
+		</div>
+	  </section>
 	
+	
+  
+	<!-- jquery cdn link -->
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+	  <script>
+  
+		$(document).ready(function(){
+  
+			$('.videos video').click(function(){
+  
+				$(this).addClass('active').siblings().removeClass('active');
+  
+				var src = $(this).attr('src');
+				$('.main-video video').attr('src',src);
+			});
+		});
+  
+	  </script>
+
 </body>
 
 </html>
