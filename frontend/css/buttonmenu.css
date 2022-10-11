@@ -47,27 +47,35 @@ a:hover{
 
 .main{
   width: 100%;
+  
 }
 
 .sub-main{
-    align-items: left;
-    width: 50%;
-    margin: 20px;
-    float: inline-start;
+   display: inline-block;
+   padding: 1rem 1rem;
+   vertical-align: middle;
+   margin-right: 20px;
   }
 
 .sub-main1{
-    align-items: center;
-    width: 50%;
-    margin: 20px;
-    float: inline-start;
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  margin-left: 600px;
 }
 
+
 .subs-main{
-  justify-items: left;
-  width: 25%;
+  justify-items: center;
+  align-items: center;
   margin: 20px;
   float: inline-start;
+}
+
+.sub {
+  justify-items: center;
+  align-items: center;
+  margin-left: 625px;
 }
 
 .button-two, .button-menu{
